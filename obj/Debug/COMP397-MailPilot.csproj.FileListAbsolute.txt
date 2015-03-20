@@ -1,0 +1,5 @@
+C:\Users\Chemcee. M. C\Documents\Semester 4\Web Game\COMP397-MailPilot-master\COMP397-MailPilot\bin\COMP2068-CreateJSBoilerPlate.dll.config
+C:\Users\Chemcee. M. C\Documents\Semester 4\Web Game\COMP397-MailPilot-master\COMP397-MailPilot\bin\COMP2068-CreateJSBoilerPlate.dll
+C:\Users\Chemcee. M. C\Documents\Semester 4\Web Game\COMP397-MailPilot-master\COMP397-MailPilot\bin\COMP2068-CreateJSBoilerPlate.pdb
+C:\Users\Chemcee. M. C\Documents\Semester 4\Web Game\COMP397-MailPilot-master\COMP397-MailPilot\obj\Debug\COMP2068-CreateJSBoilerPlate.dll
+C:\Users\Chemcee. M. C\Documents\Semester 4\Web Game\COMP397-MailPilot-master\COMP397-MailPilot\obj\Debug\COMP2068-CreateJSBoilerPlate.pdb

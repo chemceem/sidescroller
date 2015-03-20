@@ -1,0 +1,11 @@
+C:\Users\Chemcee. M. C\Documents\Semester 4\Web Game\COMP397-MailPilot-master\SideScroller\bin\COMP2068-CreateJSBoilerPlate.dll.config
+C:\Users\Chemcee. M. C\Documents\Semester 4\Web Game\COMP397-MailPilot-master\SideScroller\bin\COMP2068-CreateJSBoilerPlate.dll
+C:\Users\Chemcee. M. C\Documents\Semester 4\Web Game\COMP397-MailPilot-master\SideScroller\bin\COMP2068-CreateJSBoilerPlate.pdb
+C:\Users\Chemcee. M. C\Documents\Semester 4\Web Game\COMP397-MailPilot-master\SideScroller\obj\Debug\COMP2068-CreateJSBoilerPlate.dll
+C:\Users\Chemcee. M. C\Documents\Semester 4\Web Game\COMP397-MailPilot-master\SideScroller\obj\Debug\COMP2068-CreateJSBoilerPlate.pdb
+C:\Users\Chemcee. M. C\Documents\Semester 4\Web Game\COMP397-MailPilot-master\SideScroller\obj\Debug\SideScroller.csprojResolveAssemblyReference.cache
+C:\Users\Chemcee. M. C\Documents\Semester 4\Web Game\sidescroller\SideScroller\bin\COMP2068-CreateJSBoilerPlate.dll.config
+C:\Users\Chemcee. M. C\Documents\Semester 4\Web Game\sidescroller\SideScroller\bin\COMP2068-CreateJSBoilerPlate.dll
+C:\Users\Chemcee. M. C\Documents\Semester 4\Web Game\sidescroller\SideScroller\bin\COMP2068-CreateJSBoilerPlate.pdb
+C:\Users\Chemcee. M. C\Documents\Semester 4\Web Game\sidescroller\SideScroller\obj\Debug\COMP2068-CreateJSBoilerPlate.dll
+C:\Users\Chemcee. M. C\Documents\Semester 4\Web Game\sidescroller\SideScroller\obj\Debug\COMP2068-CreateJSBoilerPlate.pdb
