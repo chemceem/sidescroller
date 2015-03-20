@@ -11,7 +11,7 @@ var objects;
         __extends(Barricade, _super);
         // CONSTRUCTOR
         function Barricade() {
-            _super.call(this, "cloud");
+            _super.call(this, "barricade");
             this.sound = "thunder";
             this.reset();
         }

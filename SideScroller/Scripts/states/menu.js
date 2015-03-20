@@ -20,11 +20,11 @@ var states;
             this.ocean = new objects.Road();
             this.game.addChild(this.ocean);
             //Game Over Label
-            this.mailPilotLabel = new objects.Label(320, 40, "MAIL PILOT");
-            this.mailPilotLabel.font = "60px Consolas";
-            this.mailPilotLabel.regX = this.mailPilotLabel.getMeasuredWidth() * 0.5;
-            this.mailPilotLabel.regY = this.mailPilotLabel.getMeasuredLineHeight() * 0.5;
-            this.game.addChild(this.mailPilotLabel);
+            this.sideScroller = new objects.Label(320, 40, "SIDE SCROLLER");
+            this.sideScroller.font = "60px Consolas";
+            this.sideScroller.regX = this.sideScroller.getMeasuredWidth() * 0.5;
+            this.sideScroller.regY = this.sideScroller.getMeasuredLineHeight() * 0.5;
+            this.game.addChild(this.sideScroller);
             //Play Button
             this.playButton = new objects.Button(320, 280, "playButton");
             this.playButton.on("click", this.playClicked, this);

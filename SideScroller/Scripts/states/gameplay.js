@@ -10,21 +10,21 @@ var states;
 (function (states) {
     var GamePlay = (function () {
         function GamePlay() {
-            this.clouds = [];
+            this.barricade = [];
             // Instantiate Game Container
             this.game = new createjs.Container();
             //Ocean object
-            this.ocean = new objects.Road();
-            this.game.addChild(this.ocean);
+            this.road = new objects.Road();
+            this.game.addChild(this.road);
             //Island object
             this.island = new objects.Island();
             this.game.addChild(this.island);
             //Plane object
-            this.plane = new objects.Car();
-            this.game.addChild(this.plane);
-            for (var cloud = 2; cloud >= 0; cloud--) {
-                this.clouds[cloud] = new objects.Barricade();
-                this.game.addChild(this.clouds[cloud]);
+            this.car = new objects.Car();
+            this.game.addChild(this.car);
+            for (var barricades = 2; barricades >= 0; barricades--) {
+                this.barricade[barricades] = new objects.Barricade();
+                this.game.addChild(this.barricade[barricades]);
             }
             // Instantiate Scoreboard
             this.scoreboard = new objects.ScoreBoard(this.game);
@@ -38,10 +38,10 @@ var states;
         // CHECK COLLISION METHOD
         GamePlay.prototype.checkCollision = function (collider) {
             if (this.scoreboard.active) {
-                var planePosition = new createjs.Point(this.plane.x, this.plane.y);
+                var planePosition = new createjs.Point(this.car.x, this.car.y);
                 var objectPosition = new createjs.Point(collider.x, collider.y);
                 var theDistance = this.distance(planePosition, objectPosition);
-                if (theDistance < ((this.plane.height * 0.5) + (collider.height * 0.5))) {
+                if (theDistance < ((this.car.height * 0.5) + (collider.height * 0.5))) {
                     if (collider.isColliding != true) {
                         createjs.Sound.play(collider.sound);
                         if (collider.name == "cloud") {
@@ -59,12 +59,12 @@ var states;
             }
         }; // checkCollision Method
         GamePlay.prototype.update = function () {
-            this.ocean.update();
+            this.road.update();
             this.island.update();
-            this.plane.update();
-            for (var cloud = 2; cloud >= 0; cloud--) {
-                this.clouds[cloud].update();
-                this.checkCollision(this.clouds[cloud]);
+            this.car.update();
+            for (var barricades = 2; barricades >= 0; barricades--) {
+                this.barricade[barricades].update();
+                this.checkCollision(this.barricade[barricades]);
             }
             this.checkCollision(this.island);
             this.scoreboard.update();
@@ -81,7 +81,7 @@ var states;
                 stateChanged = true;
             }
             stage.update(); // Refreshes our stage
-        }; // Update Method
+        };
         return GamePlay;
     })();
     states.GamePlay = GamePlay; // GamePlay Class

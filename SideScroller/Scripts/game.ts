@@ -40,13 +40,13 @@ var gameOver: states.GameOver;
 var menu: states.Menu;
 
 var manifest = [
-    { id: "cloud", src: "assets/images/cloud.png" },
-    { id: "island", src: "assets/images/island.png" },
+    { id: "cloud", src: "assets/images/barricade.png" },
+    { id: "island", src: "assets/images/fuel.png" },
     { id: "road", src: "assets/images/road.png" },
     { id: "car", src: "assets/images/car.png" },
     { id: "playButton", src: "assets/images/playButton.png" },
     { id: "tryAgainButton", src: "assets/images/tryAgainButton.png" },
-    { id: "engine", src: "assets/audio/engine.ogg" },
+    { id: "engine", src: "assets/audio/car.mp3" },
     { id: "yay", src: "assets/audio/yay.ogg" },
     { id: "thunder", src: "assets/audio/thunder.ogg" }
 ];

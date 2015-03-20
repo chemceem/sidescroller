@@ -13,10 +13,10 @@ module states {
         // Game Objects 
         public game: createjs.Container;
         public scoreboard: objects.ScoreBoard;
-        public plane: objects.Car;
+        public car: objects.Car;
         public island: objects.Island
-        public clouds: objects.Barricade[] = [];
-        public ocean: objects.Road;
+        public barricade: objects.Barricade[] = [];
+        public road: objects.Road;
 
         constructor() {
             // Instantiate Game Container
@@ -24,8 +24,8 @@ module states {
 
 
             //Ocean object
-            this.ocean = new objects.Road();
-            this.game.addChild(this.ocean);
+            this.road = new objects.Road();
+            this.game.addChild(this.road);
 
             //Island object
             this.island = new objects.Island();
@@ -33,13 +33,13 @@ module states {
 
 
             //Plane object
-            this.plane = new objects.Car();
-            this.game.addChild(this.plane);
+            this.car = new objects.Car();
+            this.game.addChild(this.car);
 
-            //Cloud object
-            for (var cloud = 2; cloud >= 0; cloud--) {
-                this.clouds[cloud] = new objects.Barricade();
-                this.game.addChild(this.clouds[cloud]);
+            //Barricade object
+            for (var barricades = 2; barricades >= 0; barricades--) {
+                this.barricade[barricades] = new objects.Barricade();
+                this.game.addChild(this.barricade[barricades]);
             }
 
 
@@ -59,10 +59,10 @@ module states {
         // CHECK COLLISION METHOD
         public checkCollision(collider: objects.GameObject) {
             if (this.scoreboard.active) {
-                var planePosition: createjs.Point = new createjs.Point(this.plane.x, this.plane.y);
+                var planePosition: createjs.Point = new createjs.Point(this.car.x, this.car.y);
             var objectPosition: createjs.Point = new createjs.Point(collider.x, collider.y);
             var theDistance = this.distance(planePosition, objectPosition);
-            if (theDistance < ((this.plane.height * 0.5) + (collider.height * 0.5))) {
+            if (theDistance < ((this.car.height * 0.5) + (collider.height * 0.5))) {
                 if (collider.isColliding != true) {
                     createjs.Sound.play(collider.sound);
                     if (collider.name == "cloud") {
@@ -81,16 +81,16 @@ module states {
 
         public update() {
 
-            this.ocean.update();
+            this.road.update();
 
             this.island.update();
 
-            this.plane.update();
+            this.car.update();
 
-            for (var cloud = 2; cloud >= 0; cloud--) {
-                this.clouds[cloud].update();
+            for (var barricades = 2; barricades >= 0; barricades--) {
+                this.barricade[barricades].update();
 
-                this.checkCollision(this.clouds[cloud]);
+                this.checkCollision(this.barricade[barricades]);
             }
 
             this.checkCollision(this.island);
@@ -113,7 +113,7 @@ module states {
 
             stage.update(); // Refreshes our stage
 
-    } // Update Method
+    }
 
     } // GamePlay Class
 

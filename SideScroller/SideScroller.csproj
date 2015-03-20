@@ -59,11 +59,12 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="assets\audio\engine.ogg" />
+    <Content Include="assets\audio\car.mp3" />
     <Content Include="assets\audio\thunder.ogg" />
     <Content Include="assets\audio\yay.ogg" />
     <Content Include="assets\images\barricade.png" />
     <Content Include="assets\images\car.png" />
+    <Content Include="assets\images\fuel.png" />
     <Content Include="assets\images\playButton.png" />
     <Content Include="assets\images\road.png" />
     <Content Include="assets\images\tryAgainButton.png" />
@@ -76,10 +77,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="assets\images\cloud.png" />
-    <Content Include="assets\images\island.png" />
-    <Content Include="assets\images\plane.png" />
-    <Content Include="assets\images\sideplane.gif" />
     <Content Include="css\game.css" />
     <Content Include="index.html" />
     <Content Include="Scripts\lib\easeljs-0.8.0.min.js" />
