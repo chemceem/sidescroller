@@ -4,15 +4,14 @@
 
         // CONSTRUCTOR
         constructor() {
-            super("barricade");
-            this.sound = "thunder";
+            super("cloud");
+            this.sound = "crash";
             this.reset();
         }
 
         public update() {
             this.y += this._dy;
             this.x += this._dx;
-
             this.checkBounds();
         }
 

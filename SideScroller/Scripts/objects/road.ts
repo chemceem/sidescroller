@@ -7,7 +7,6 @@
         // CONSTRUCTOR
         constructor() {
             super(assetLoader.getResult("road"));
-
             this.reset();
         }
 

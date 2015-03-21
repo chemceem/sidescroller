@@ -60,8 +60,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="assets\audio\car.mp3" />
-    <Content Include="assets\audio\thunder.ogg" />
-    <Content Include="assets\audio\yay.ogg" />
+    <Content Include="assets\audio\crash.mp3" />
+    <Content Include="assets\audio\fuel.wav" />
     <Content Include="assets\images\barricade.png" />
     <Content Include="assets\images\car.png" />
     <Content Include="assets\images\fuel.png" />

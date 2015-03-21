@@ -13,6 +13,7 @@
         // CONSTRUCTOR
         constructor(assetString: string) {
             super(assetLoader.getResult(assetString));
+
             this.name = assetString;
 
             this.width = this.getBounds().width;

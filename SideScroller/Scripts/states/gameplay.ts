@@ -14,7 +14,7 @@ module states {
         public game: createjs.Container;
         public scoreboard: objects.ScoreBoard;
         public car: objects.Car;
-        public fuel: objects.Island;
+        public fuel: objects.Fuel;
         public barricade: objects.Barricade[] = [];
         public road: objects.Road;
 
@@ -27,7 +27,7 @@ module states {
             this.game.addChild(this.road);
 
             //Fuel object
-            this.fuel = new objects.Island();
+            this.fuel = new objects.Fuel();
             this.game.addChild(this.fuel);
 
             //Car object
@@ -61,12 +61,17 @@ module states {
             var theDistance = this.distance(planePosition, objectPosition);             //distance method is called
             if (theDistance < ((this.car.height * 0.3) + (collider.height * 0.3))) {
                 if (collider.isColliding != true) {
-                    createjs.Sound.play(collider.sound);
                     if (collider.name == "cloud") {
+                        createjs.Sound.play(collider.sound, 100);
                         this.scoreboard.lives--;
                     }
-                    if (collider.name == "island") {
+                    if (collider.name == "island") {   
+                        createjs.Sound.play(collider.sound);   
+                        this.fuel.reset();
                         this.scoreboard.score += 100;
+                        if (this.scoreboard.score > 0 && this.scoreboard.score % 1000 == 0) {
+                            this.scoreboard.lives++;
+                        }
                     }
                 }
                 collider.isColliding = true;
@@ -109,7 +114,5 @@ module states {
             stage.update(); // Refreshes the stage
 
     }
-
     }
-
 }

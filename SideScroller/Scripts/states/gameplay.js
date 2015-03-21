@@ -17,7 +17,7 @@ var states;
             this.road = new objects.Road();
             this.game.addChild(this.road);
             //Fuel object
-            this.fuel = new objects.Island();
+            this.fuel = new objects.Fuel();
             this.game.addChild(this.fuel);
             //Car object
             this.car = new objects.Car();
@@ -43,12 +43,17 @@ var states;
                 var theDistance = this.distance(planePosition, objectPosition); //distance method is called
                 if (theDistance < ((this.car.height * 0.3) + (collider.height * 0.3))) {
                     if (collider.isColliding != true) {
-                        createjs.Sound.play(collider.sound);
                         if (collider.name == "cloud") {
+                            createjs.Sound.play(collider.sound, 100);
                             this.scoreboard.lives--;
                         }
                         if (collider.name == "island") {
+                            createjs.Sound.play(collider.sound);
+                            this.fuel.reset();
                             this.scoreboard.score += 100;
+                            if (this.scoreboard.score > 0 && this.scoreboard.score % 1000 == 0) {
+                                this.scoreboard.lives++;
+                            }
                         }
                     }
                     collider.isColliding = true;

@@ -74,7 +74,7 @@ module states {
 
         /* Method to change instructions*/
         public getInstructions() {
-            return "\n\n\n\n1. Move mouse left and right to move the car.\n\n" +
+            return "\n\n\n\n 1. Move mouse left and right to move the car.\n\n" +
                 " 2. Avoid hitting the barricades. Each collision would take away a life.\n\n" +
                 " 3. Try to catch the fuel. Each fuel would earn you 100 points. \n\n" +
                 " 4. Collect 1000 points to earn an extra life.";
