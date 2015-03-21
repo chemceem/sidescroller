@@ -4,6 +4,7 @@ var constants;
     constants.MENU_STATE = 0;
     constants.PLAY_STATE = 1;
     constants.GAME_OVER_STATE = 2;
+    constants.INSTRUCTION_STATE = 3;
     // Game Constants
     constants.BARRICADE_NUM = 3;
     constants.LABEL_FONT = "40px Consolas";

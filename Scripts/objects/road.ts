@@ -7,31 +7,27 @@
         // CONSTRUCTOR
         constructor() {
             super(assetLoader.getResult("road"));
-
             this.reset();
         }
 
         // PUBLIC METHODS ++++++++++++++++++++++++++++++++++++++++++
         public update() {
             this.y += this._dy;
-
-            this._checkBounds();
+            this.chechBounds();
         }
 
-        // Reset position of island to the top
+        // Reset position of fuel to the top
         public reset() {
             this.y = -960
             this.x = 0;
         }
 
         // PRIVATE METHODS +++++++++++++++++++++++++++++++++++++++++
-        private _checkBounds() {
-            // check if island has left the bottom of the screen
+        private chechBounds() {
+            // check if fuel has left from the bottom of the screen
             if (this.y === 0) {
                 this.reset();
             }
         }
-
     }
-
-}  
+}
