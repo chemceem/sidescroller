@@ -8,7 +8,7 @@
 /// <reference path="objects/gameobject.ts" />
 /// <reference path="objects/scoreboard.ts" />
 /// <reference path="objects/car.ts" />
-/// <reference path="objects/island.ts" />
+/// <reference path="objects/fuel.ts" />
 /// <reference path="objects/barricade.ts" />
 /// <reference path="objects/road.ts" />
 /// <reference path="objects/button.ts" />
@@ -16,7 +16,6 @@
 /// <reference path="states/gameplay.ts" />
 /// <reference path="states/gameover.ts" />
 /// <reference path="states/menu.ts" />
-//checking for commmit. fixing minor bug
 // Global game Variables
 var canvas;
 var stage;
@@ -38,6 +37,7 @@ var manifest = [
     { id: "car", src: "assets/images/car.png" },
     { id: "playButton", src: "assets/images/playButton.png" },
     { id: "tryAgainButton", src: "assets/images/tryAgainButton.png" },
+    { id: "instructionsButton", src: "assets/imags/instructions.png" },
     { id: "engine", src: "assets/audio/car.mp3" },
     { id: "yay", src: "assets/audio/yay.ogg" },
     { id: "thunder", src: "assets/audio/thunder.ogg" }

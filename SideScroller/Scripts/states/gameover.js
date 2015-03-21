@@ -1,6 +1,6 @@
 /// <reference path="../constants.ts" />
 /// <reference path="../objects/gameobject.ts" />
-/// <reference path="../objects/island.ts" />
+/// <reference path="../objects/fuel.ts" />
 /// <reference path="../objects/road.ts" />
 /// <reference path="../objects/car.ts" />
 /// <reference path="../objects/barricade.ts" />
@@ -54,6 +54,6 @@ var states;
         }; // Update Method
         return GameOver;
     })();
-    states.GameOver = GameOver; // Game Over Class
-})(states || (states = {})); // States Module
+    states.GameOver = GameOver;
+})(states || (states = {}));
 //# sourceMappingURL=gameover.js.map

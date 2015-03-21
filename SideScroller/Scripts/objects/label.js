@@ -7,7 +7,6 @@ var __extends = this.__extends || function (d, b) {
 /// <reference path="../constants.ts" />
 var objects;
 (function (objects) {
-    // LABEL Class ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
     var Label = (function (_super) {
         __extends(Label, _super);
         function Label(x, y, labelText) {

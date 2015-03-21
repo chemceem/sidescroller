@@ -6,7 +6,7 @@ var __extends = this.__extends || function (d, b) {
 };
 var objects;
 (function (objects) {
-    // CLOUD CLASS
+    // BARRICADE CLASS
     var Barricade = (function (_super) {
         __extends(Barricade, _super);
         // CONSTRUCTOR
@@ -15,11 +15,10 @@ var objects;
             this.sound = "thunder";
             this.reset();
         }
-        // PUBLIC METHODS ++++++++++++++++++++++++++++++++++++++++++
         Barricade.prototype.update = function () {
             this.y += this._dy;
             this.x += this._dx;
-            this._checkBounds();
+            this.checkBounds();
         };
         // Reset position of island to the top
         Barricade.prototype.reset = function () {
@@ -28,8 +27,7 @@ var objects;
             this._dy = Math.floor(Math.random() * 5) + 5;
             this._dx = Math.floor(Math.random() * 4) - 2;
         };
-        // PRIVATE METHODS +++++++++++++++++++++++++++++++++++++++++
-        Barricade.prototype._checkBounds = function () {
+        Barricade.prototype.checkBounds = function () {
             // check if island has left the bottom of the screen
             if (this.y >= (480 + this.height)) {
                 this.reset();

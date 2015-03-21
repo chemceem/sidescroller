@@ -19,16 +19,16 @@ var objects;
         // PUBLIC METHODS ++++++++++++++++++++++++++++++++++++++++++
         Road.prototype.update = function () {
             this.y += this._dy;
-            this._checkBounds();
+            this.chechBounds();
         };
-        // Reset position of island to the top
+        // Reset position of fuel to the top
         Road.prototype.reset = function () {
             this.y = -960;
             this.x = 0;
         };
         // PRIVATE METHODS +++++++++++++++++++++++++++++++++++++++++
-        Road.prototype._checkBounds = function () {
-            // check if island has left the bottom of the screen
+        Road.prototype.chechBounds = function () {
+            // check if fuel has left from the bottom of the screen
             if (this.y === 0) {
                 this.reset();
             }

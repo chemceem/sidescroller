@@ -1,31 +1,34 @@
 ﻿module objects {
-    // SCOREBOARD CLASS ++++++++++++++++++++++++++++++++++++++++
+   
+    /*
+     * This class is responsible 
+     * for displaying the score 
+     * and the lives left of the player
+     */
     export class ScoreBoard {
         public score: number;
         public lives: number;
         public active: boolean;
-        private _scoreLabel: createjs.Text;
-        private _livesLabel: createjs.Text;
+        private scoreLabel: createjs.Text;
+        private livesLabel: createjs.Text;
 
-        // CONSTRUCTOR +++++++++++++++++++++++++++++++++++++++++
-        constructor(game: createjs.Container) {
+       constructor(game: createjs.Container) {
             this.score = 0;
             this.lives = 5;
             this.active = true;
 
-            this._livesLabel = new createjs.Text("Lives: ", "40px Consolas", "#ffff00");
-            game.addChild(this._livesLabel);
+            this.livesLabel = new createjs.Text("Lives: ", "40px Consolas", "#ffff00");
+            game.addChild(this.livesLabel);
 
-            this._scoreLabel = new createjs.Text("Score: ", "40px Consolas", "#ffff00");
-            this._scoreLabel.x = 400;
-            game.addChild(this._scoreLabel);
+            this.scoreLabel = new createjs.Text("Score: ", "40px Consolas", "#ffff00");
+            this.scoreLabel.x = 400;
+            game.addChild(this.scoreLabel);
 
         }
 
-        // PUBLIC METHODS +++++++++++++++++++++++++++++++++++++
         public update(): void {
-            this._livesLabel.text = "Lives: " + this.lives;
-            this._scoreLabel.text = "Score: " + this.score;
+            this.livesLabel.text = "Lives: " + this.lives;
+            this.scoreLabel.text = "Score: " + this.score;
         }
     }
 } 
