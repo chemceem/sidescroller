@@ -18,7 +18,9 @@ module states {
         public finalScoreLabel: objects.Label;
         public highScoreLabel: objects.Label;
         public tryAgainButton: objects.Button;
+        public menuButton: objects.Button;
         public tryAgain: boolean = false;
+        public menuReturn: boolean = false;
 
         // CONSTRUCTOR ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
         constructor() {
@@ -48,7 +50,11 @@ module states {
             this.tryAgainButton = new objects.Button(320, 280, "tryAgainButton");
             this.tryAgainButton.on("click", this.tryAgainClicked, this);
 
+            this.menuButton = new objects.Button(320, 400, "menuButton");
+            this.menuButton.on("click",this.menuClicked,this);
+
             this.game.addChild(this.tryAgainButton);
+            this.game.addChild(this.menuButton);
 
             // Add Game Container to Stage
             stage.addChild(this.game);
@@ -56,6 +62,10 @@ module states {
 
         public tryAgainClicked() {
             this.tryAgain = true;
+        }
+
+        public menuClicked() {
+            this.menuReturn = true;
         }
 
         // PUBLIC METHODS +++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -69,7 +79,12 @@ module states {
                 currentState = constants.PLAY_STATE;
                 stateChanged = true;
             }
-
+            else if (this.menuReturn){
+                this.game.removeAllChildren();
+                stage.removeChild(this.game);
+                currentState = constants.MENU_STATE;
+                stateChanged = true;
+            }
             stage.update(); // Refreshes our stage
 
         } // Update Method

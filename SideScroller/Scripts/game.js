@@ -14,6 +14,7 @@
 /// <reference path="objects/button.ts" />
 /// <reference path="objects/label.ts" />
 /// <reference path="states/gameplay.ts" />
+/// <reference path="states/instructions.ts" />
 /// <reference path="states/gameover.ts" />
 /// <reference path="states/menu.ts" />
 // Global game Variables
@@ -39,6 +40,7 @@ var manifest = [
     { id: "playButton", src: "assets/images/playButton.png" },
     { id: "tryAgainButton", src: "assets/images/tryAgainButton.png" },
     { id: "instructionsButton", src: "assets/images/instructions.png" },
+    { id: "menuButton", src: "assets/images/menuButton.png" },
     { id: "engine", src: "assets/audio/car.mp3" },
     { id: "yay", src: "assets/audio/yay.ogg" },
     { id: "thunder", src: "assets/audio/thunder.ogg" }

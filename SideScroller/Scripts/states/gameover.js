@@ -14,6 +14,7 @@ var states;
         // CONSTRUCTOR ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
         function GameOver() {
             this.tryAgain = false;
+            this.menuReturn = false;
             // Instantiate Game Container
             this.game = new createjs.Container();
             //Ocean object
@@ -34,12 +35,18 @@ var states;
             //Try Again Button
             this.tryAgainButton = new objects.Button(320, 280, "tryAgainButton");
             this.tryAgainButton.on("click", this.tryAgainClicked, this);
+            this.menuButton = new objects.Button(320, 400, "menuButton");
+            this.menuButton.on("click", this.menuClicked, this);
             this.game.addChild(this.tryAgainButton);
+            this.game.addChild(this.menuButton);
             // Add Game Container to Stage
             stage.addChild(this.game);
         } // Constructor
         GameOver.prototype.tryAgainClicked = function () {
             this.tryAgain = true;
+        };
+        GameOver.prototype.menuClicked = function () {
+            this.menuReturn = true;
         };
         // PUBLIC METHODS +++++++++++++++++++++++++++++++++++++++++++++++++++++++++
         GameOver.prototype.update = function () {
@@ -48,6 +55,12 @@ var states;
                 this.game.removeAllChildren();
                 stage.removeChild(this.game);
                 currentState = constants.PLAY_STATE;
+                stateChanged = true;
+            }
+            else if (this.menuReturn) {
+                this.game.removeAllChildren();
+                stage.removeChild(this.game);
+                currentState = constants.MENU_STATE;
                 stateChanged = true;
             }
             stage.update(); // Refreshes our stage
