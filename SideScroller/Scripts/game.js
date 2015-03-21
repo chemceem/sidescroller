@@ -30,6 +30,7 @@ var stateChanged = false;
 var gamePlay;
 var gameOver;
 var menu;
+var instructions;
 var manifest = [
     { id: "cloud", src: "assets/images/barricade.png" },
     { id: "island", src: "assets/images/fuel.png" },
@@ -37,7 +38,7 @@ var manifest = [
     { id: "car", src: "assets/images/car.png" },
     { id: "playButton", src: "assets/images/playButton.png" },
     { id: "tryAgainButton", src: "assets/images/tryAgainButton.png" },
-    { id: "instructionsButton", src: "assets/imags/instructions.png" },
+    { id: "instructionsButton", src: "assets/images/instructions.png" },
     { id: "engine", src: "assets/audio/car.mp3" },
     { id: "yay", src: "assets/audio/yay.ogg" },
     { id: "thunder", src: "assets/audio/thunder.ogg" }
@@ -93,6 +94,11 @@ function changeState(state) {
             // instantiate game over screen
             gameOver = new states.GameOver();
             currentStateFunction = gameOver;
+            break;
+        case constants.INSTRUCTION_STATE:
+            // instantiates instructions screen
+            instructions = new states.Instructions();
+            currentStateFunction = instructions;
             break;
     }
 }
